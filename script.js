@@ -6,6 +6,7 @@ function compute()
     var interest = principal * years * rate / 100;
     var year = new Date().getFullYear() + parseInt(years);
 
+    //validation principal
     if(principal <= 0) {
         alert("Enter a positive number");
         myFocus();
@@ -14,13 +15,15 @@ function compute()
     }
 }
 
+//onfocus principal
+function myFocus() {
+    document.getElementById("principal").focus();
+}
+
 function updateRate()
 {
     var rateval = document.getElementById("rate").value;
     document.getElementById("rate_val").innerText = rateval + "%";
 }
 
-function myFocus() {
-    document.getElementById("principal").focus();
-}
         
